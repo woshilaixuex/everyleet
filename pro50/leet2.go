@@ -48,7 +48,7 @@ func (stack *Stack[T]) Check() (T, bool) {
 	}
 	return stack.element[stack.index], true
 }
-func IsValid(s string) bool {
+func isValid(s string) bool {
 	stack := NewStack[rune]() // 使用泛型的栈来存储括号字符
 	mapping := map[rune]rune{
 		')': '(',
@@ -67,7 +67,7 @@ func IsValid(s string) bool {
 	}
 	return stack.IsEmpty()
 }
-func isValid(s string) bool { // 官方题解
+func isValid_(s string) bool { // 官方题解
 	n := len(s)
 	if n%2 == 1 {
 		return false
